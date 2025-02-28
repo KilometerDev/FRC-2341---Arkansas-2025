@@ -13,20 +13,20 @@ public class Elevator extends SubsystemBase{
     private final TalonFX followerMotor;
 
     // PID constants for both motors
-    private static final double kP = 10;
-    private static final double kI = 0.0;
-    private static final double kD = 0.0;
-    private static final double kS = 0.0;
+    private static final double kP = 10; // TODO: tune this value
+    private static final double kI = 0.0; // TODO: tune this value
+    private static final double kD = 0.0; // TODO: tune this value
+    private static final double kS = 0.0; // TODO: tune this value
 
     // Motion Magic constants
     // motion magic gives us the ability to control a constant velocity throughout or movement to the setpoint, instead of just rushing there and potentially breaking something
     // it gives more precise control over the elevator movement throughout the closed loop cycle
 
-    private static final double kCruiseVelocity = 50;
-    private static final double kAcceleration = 100;
+    private static final double kCruiseVelocity = 50; // TODO: tune this value
+    private static final double kAcceleration = 100; // TODO: tune this value
 
-    private static final double kElevatorMin = -1000;
-    private static final double kElevatorMax = 1000;
+    private static final double kElevatorMin = -1000; // TODO: tune this value
+    private static final double kElevatorMax = 1000; // TODO: tune this value
 
     public Elevator() {
         masterMotor = new TalonFX(50);
