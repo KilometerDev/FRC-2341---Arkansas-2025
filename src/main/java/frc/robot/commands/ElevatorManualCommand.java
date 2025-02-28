@@ -20,7 +20,7 @@ public class ElevatorManualCommand extends Command {
     public void excecute () {
         double speed = -joystick.getRawAxis(joystickAxis);
         double deadbandSpeed = MathUtil.applyDeadband(speed, 0.1);
-        elevator.manualControl(deadbandSpeed * 1); // scale to prevent full throttle
+        elevator.manualControl(deadbandSpeed * 1); // scale to prevent full throttle TODO: tune this value
     }
 
     // public void end(boolean interrupted) {
